@@ -12,7 +12,8 @@
     "release": "release-it",
     "release:patch": "release-it patch",
     "release:minor": "release-it minor",
-    "release:major": "release-it major"
+    "release:major": "release-it major",
+    "release:dry": "release-it --dry-run"
   },
   "dependencies": {
     "nuxt": "^4.4.4",
