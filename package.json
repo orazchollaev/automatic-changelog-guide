@@ -13,7 +13,12 @@
     "release:patch": "release-it patch",
     "release:minor": "release-it minor",
     "release:major": "release-it major",
-    "release:dry": "release-it --dry-run"
+    "release:dry": "release-it --dry-run",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "nuxt": "^4.4.4",
@@ -24,12 +29,25 @@
   "devDependencies": {
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
-    "@release-it/conventional-changelog": "^11.0.0",
-    "release-it": "^20.0.1",
     "@nuxt/eslint": "^1.15.2",
+    "@release-it/conventional-changelog": "^11.0.0",
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "prettier": "^3.8.3"
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.2",
+    "prettier": "^3.8.3",
+    "release-it": "^20.0.1",
+    "typescript-eslint": "^8.59.2",
+    "vue-tsc": "^3.2.8"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,json,md}": [
+      "prettier --write"
+    ]
   }
 }
