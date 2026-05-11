@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.0](https://github.com/orazchollaev/automatic-changelog-guide/compare/v0.0.3...v0.1.0) (2026-05-11)
+
+### Features
+
+- add app-version in header ([98a387e](https://github.com/orazchollaev/automatic-changelog-guide/commit/98a387ef1e7c2c83d17c43dbace64434e0efa32e))
+- added pre-version ui for read documentation ([006d1f3](https://github.com/orazchollaev/automatic-changelog-guide/commit/006d1f30c1b4bc089dad85cedeb78082b76a09e9))
+
+### Chores
+
+- add @nuxt/content for rendering markdown files ([fe98594](https://github.com/orazchollaev/automatic-changelog-guide/commit/fe98594c10b30bd3ff932ac08ee19d0e730bb0c7))
+- remove node-linker ([7d0bd49](https://github.com/orazchollaev/automatic-changelog-guide/commit/7d0bd49d88c9428b04e0daecdb59aa40140e70f0))
+
 ## [0.0.3](https://github.com/orazchollaev/automatic-changelog-guide/compare/v0.0.2...v0.0.3) (2026-05-11)
 
 ### Features
