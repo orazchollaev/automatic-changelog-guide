@@ -21,6 +21,8 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@nuxt/content": "^3.13.0",
+    "better-sqlite3": "^12.9.0",
     "nuxt": "^4.4.4",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6"
@@ -48,6 +50,12 @@
     ],
     "*.{css,scss,json,md}": [
       "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "sqlite3"
     ]
   }
 }
