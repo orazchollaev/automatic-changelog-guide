@@ -1,9 +1,17 @@
 import tseslint from "typescript-eslint"
+import vueParser from "vue-eslint-parser"
 import withNuxt from "./.nuxt/eslint.config.mjs"
 
 export default withNuxt(
   tseslint.config({
+    languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
     rules: {
+      "no-undef": "off",
       // ── Vue ───────────────────────────────────────────────────────────────
       "vue/multi-word-component-names": "off",
       "vue/no-multiple-template-root": "off",

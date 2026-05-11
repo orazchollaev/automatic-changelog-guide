@@ -18,7 +18,7 @@ işlemleri yapılır.
 
 ---
 
-# Nasıl Çalışır?
+## Nasıl Çalışır?
 
 Her commit belirli bir formata göre yazılır.
 
@@ -39,7 +39,7 @@ Release oluşturulduğunda sistem:
 
 ---
 
-# Commit Türleri
+## Commit Türleri
 
 | Tür        | Açıklama                     |
 | ---------- | ---------------------------- |
@@ -57,23 +57,20 @@ Release oluşturulduğunda sistem:
 
 ---
 
-# Örnek Commitler
+## Örnek Commitler
 
 ```bash
 git commit -m "feat: comic button örnekleri eklendi"
-
 git commit -m "fix: sidebar responsive sorunu düzeltildi"
-
 git commit -m "docs: kurulum bölümü geliştirildi"
-
 git commit -m "style: comic shadow efektleri geliştirildi"
 ```
 
 ---
 
-# Release Komutları
+## Release Komutları
 
-## Dry Run
+### Dry Run
 
 Gerçek release oluşturmadan önizleme yapar:
 
@@ -81,9 +78,7 @@ Gerçek release oluşturmadan önizleme yapar:
 pnpm release:dry
 ```
 
----
-
-## Gerçek Release
+### Gerçek Release
 
 Yeni release oluşturur:
 
@@ -99,7 +94,7 @@ Bu işlem otomatik olarak:
 
 ---
 
-# Örnek CHANGELOG Çıktısı
+## Örnek CHANGELOG Çıktısı
 
 ```md
 # Changelog
@@ -121,13 +116,11 @@ Bu işlem otomatik olarak:
 
 ---
 
-# Husky
+## Husky
 
 Projede Git hook sistemi olarak Husky kullanılır.
 
----
-
-## pre-commit
+### pre-commit
 
 Her commit öncesi çalışır:
 
@@ -135,9 +128,7 @@ Her commit öncesi çalışır:
 - Prettier
 - lint-staged
 
----
-
-## commit-msg
+### commit-msg
 
 Commit mesajını kontrol eder.
 
@@ -155,11 +146,9 @@ git commit -m "feat: changelog dokümantasyonu eklendi"
 
 ---
 
-# lint-staged
+## lint-staged
 
 Sadece stage edilmiş dosyaları lint eder.
-
-Örnek yapı:
 
 ```json
 {
@@ -172,19 +161,17 @@ Sadece stage edilmiş dosyaları lint eder.
 
 ---
 
-# Önerilen Workflow
+## Önerilen Workflow
 
 ```bash
 git add .
-
 git commit -m "feat: yeni dokümantasyon bölümü eklendi"
-
 pnpm release
 ```
 
 ---
 
-# Versiyonlama
+## Versiyonlama
 
 Bu proje Semantic Versioning kullanır.
 
@@ -196,7 +183,7 @@ Bu proje Semantic Versioning kullanır.
 
 ---
 
-# Notlar
+## Notlar
 
 - Commit mesajlarını açıklayıcı yazın.
 - Commit türlerini küçük harf kullanın.
