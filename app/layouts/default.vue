@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const appVersion = useRuntimeConfig().public.appVersion
+
 // @nuxt/content heading ID slugification:
 // Turkish chars: ı→i, ö→o, ü→u, ş→s, ç→c, ğ→g, spaces→-, special chars removed.
 // Hierarchy: h1 = page title only, h2 = sections, h3 = subsections.
@@ -117,7 +119,7 @@ function scrollTo(id: string) {
         / index
       </span>
       <div class="topbar-spacer" />
-      <span class="topbar-badge">v0.1.0</span>
+      <span class="topbar-badge">{{ appVersion }}</span>
     </header>
 
     <!-- Sidebar -->
