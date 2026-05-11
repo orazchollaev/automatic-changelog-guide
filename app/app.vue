@@ -1,1 +1,5 @@
-<template>First try</template>
+<template>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</template>
