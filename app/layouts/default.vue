@@ -3,27 +3,27 @@ const appVersion = useRuntimeConfig().public.appVersion
 
 const navItems = [
   { label: "Giriş", id: "otomatik-changelog-sistemi", section: "overview" },
-  { label: "Nasıl Çalışır?", id: "nasil-calisir", section: "overview" },
-  { label: "Commit Türleri", id: "commit-turleri", section: "reference" },
-  { label: "Örnek Commitler", id: "ornek-commitler", section: "reference" },
-  { label: "Release Komutları", id: "release-komutlari", section: "commands" },
-  { label: "Dry Run", id: "dry-run", section: "commands" },
-  { label: "Gerçek Release", id: "gercek-release", section: "commands" },
-  { label: "Örnek CHANGELOG", id: "ornek-changelog-ciktisi", section: "commands" },
-  { label: "Husky", id: "husky", section: "config" },
-  { label: "pre-commit", id: "pre-commit", section: "config" },
-  { label: "commit-msg", id: "commit-msg", section: "config" },
-  { label: "lint-staged", id: "lint-staged", section: "config" },
-  { label: "Önerilen Workflow", id: "onerilen-workflow", section: "config" },
-  { label: "Versiyonlama", id: "versiyonlama", section: "config" },
-  { label: "Notlar", id: "notlar", section: "config" },
+  { label: "Proje Yapısı", id: "proje-yapisi", section: "overview" },
+  { label: "Nasıl Çalışır?", id: "sistem-nasil-calisir", section: "overview" },
+  { label: "Adım 1 — Commit", id: "adim-1-commit-formati", section: "steps" },
+  { label: "Commit Türleri", id: "commit-turleri", section: "steps" },
+  { label: "Adım 2 — Husky", id: "adim-2-husky-git-hooklari", section: "steps" },
+  { label: "pre-commit", id: "pre-commit", section: "steps" },
+  { label: "commit-msg", id: "commit-msg", section: "steps" },
+  { label: "Adım 3 — Release", id: "adim-3-release", section: "steps" },
+  { label: "Dry Run", id: "dry-run", section: "steps" },
+  { label: "Gerçek Release", id: "gercek-release", section: "steps" },
+  { label: "Adım 4 — Versiyon", id: "adim-4-versiyonlama-kurali", section: "steps" },
+  { label: "Tam Workflow", id: "tam-workflow", section: "reference" },
+  { label: "Örnek Changelog", id: "ornek-changelog-ciktisi", section: "reference" },
+  { label: "Versiyonlama", id: "versiyonlama", section: "reference" },
+  { label: "Notlar", id: "notlar", section: "reference" },
 ]
 
 const sections = [
   { key: "overview", label: "Genel Bakış" },
+  { key: "steps", label: "Adımlar" },
   { key: "reference", label: "Referans" },
-  { key: "commands", label: "Komutlar" },
-  { key: "config", label: "Konfigürasyon" },
 ]
 
 const activeId = ref("")
@@ -123,7 +123,7 @@ function scrollTo(id: string) {
         <span class="topbar-path-current">index</span>
       </span>
       <div class="topbar-spacer" />
-      <span class="topbar-badge">v{{ appVersion }}</span>
+      <span class="topbar-badge">{{ appVersion }}</span>
     </header>
 
     <nav class="sidebar">
