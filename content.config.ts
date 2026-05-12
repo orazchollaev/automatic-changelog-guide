@@ -2,7 +2,7 @@ import { defineContentConfig, defineCollection, z } from "@nuxt/content"
 
 export default defineContentConfig({
   collections: {
-    docs: defineCollection({
+    content: defineCollection({
       type: "page",
       source: "**/*.md",
       schema: z.object({
