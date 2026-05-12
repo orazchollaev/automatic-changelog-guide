@@ -8,21 +8,13 @@ Bu proje aşağıdaki araçları kullanarak otomatik changelog ve release sistem
 - `husky`
 - `lint-staged`
 
-Bu sistem sayesinde commit mesajlarından otomatik olarak:
-
-- sürüm yükseltme
-- changelog oluşturma
-- git tag oluşturma
-
-işlemleri yapılır.
+Bu sistem sayesinde commit mesajlarından otomatik olarak sürüm yükseltme, changelog oluşturma ve git tag oluşturma işlemleri yapılır.
 
 ---
 
-## Nasıl Çalışır?
+## Nasil Calisir
 
 Her commit belirli bir formata göre yazılır.
-
-Örnek:
 
 ```bash
 feat: dark mode dokümantasyonu eklendi
@@ -39,7 +31,7 @@ Release oluşturulduğunda sistem:
 
 ---
 
-## Commit Türleri
+## Commit Turleri
 
 | Tür        | Açıklama                     |
 | ---------- | ---------------------------- |
@@ -57,7 +49,7 @@ Release oluşturulduğunda sistem:
 
 ---
 
-## Örnek Commitler
+## Ornek Commitler
 
 ```bash
 git commit -m "feat: comic button örnekleri eklendi"
@@ -68,9 +60,13 @@ git commit -m "style: comic shadow efektleri geliştirildi"
 
 ---
 
-## Release Komutları
+## Release Komutlari
 
-### Dry Run
+Release oluşturmak için iki adım vardır: önce dry run ile önizleme yapın, ardından gerçek release'i çalıştırın.
+
+---
+
+## Dry Run
 
 Gerçek release oluşturmadan önizleme yapar:
 
@@ -78,7 +74,9 @@ Gerçek release oluşturmadan önizleme yapar:
 pnpm release:dry
 ```
 
-### Gerçek Release
+---
+
+## Gercek Release
 
 Yeni release oluşturur:
 
@@ -86,15 +84,11 @@ Yeni release oluşturur:
 pnpm release
 ```
 
-Bu işlem otomatik olarak:
-
-- version günceller
-- `CHANGELOG.md` oluşturur
-- git tag oluşturur
+Bu işlem otomatik olarak version günceller, `CHANGELOG.md` oluşturur ve git tag ekler.
 
 ---
 
-## Örnek CHANGELOG Çıktısı
+## Ornek Changelog Ciktisi
 
 ```md
 # Changelog
@@ -118,9 +112,11 @@ Bu işlem otomatik olarak:
 
 ## Husky
 
-Projede Git hook sistemi olarak Husky kullanılır.
+Projede Git hook sistemi olarak Husky kullanılır. İki aşamalı kontrol sistemi sağlar.
 
-### pre-commit
+---
+
+## Pre Commit
 
 Her commit öncesi çalışır:
 
@@ -128,9 +124,11 @@ Her commit öncesi çalışır:
 - Prettier
 - lint-staged
 
-### commit-msg
+---
 
-Commit mesajını kontrol eder.
+## Commit Msg
+
+Commit mesajını `commitlint` ile kontrol eder.
 
 Geçersiz örnek:
 
@@ -146,9 +144,9 @@ git commit -m "feat: changelog dokümantasyonu eklendi"
 
 ---
 
-## lint-staged
+## Lint Staged
 
-Sadece stage edilmiş dosyaları lint eder.
+Sadece stage edilmiş dosyaları lint eder:
 
 ```json
 {
@@ -161,7 +159,7 @@ Sadece stage edilmiş dosyaları lint eder.
 
 ---
 
-## Önerilen Workflow
+## Onerilen Workflow
 
 ```bash
 git add .
