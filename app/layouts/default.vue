@@ -123,7 +123,7 @@ function scrollTo(id: string) {
         <span class="topbar-path-current">index</span>
       </span>
       <div class="topbar-spacer" />
-      <span class="topbar-badge">{{ appVersion }}</span>
+      <span class="topbar-badge">v{{ appVersion }}</span>
     </header>
 
     <nav class="sidebar">
