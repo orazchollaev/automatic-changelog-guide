@@ -1,5 +1,6 @@
 {
   "name": "automatic-changelog-guide",
+  "description": "A minimal documentation site that demonstrates how to set up automatic versioning and changelog generation using conventional commits.",
   "version": "0.2.0",
   "type": "module",
   "private": true,
